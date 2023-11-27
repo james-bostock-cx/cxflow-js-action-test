@@ -7,6 +7,14 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: james-bostock-cx/checkmarx-cxflow-js-github-action@v0.1.3
+        uses: james-bostock-cx/checkmarx-cxflow-js-github-action@v0.1.4
         with:
           java_path: 'C:/Program Files/Eclipse Adoptium/jdk-17.0.7.7-hotspot/bin/java'
+          project: jsb-cxflow-js-action-test
+          team: ${{ secrets.CHECKMARX_TEAMS }}
+          checkmarx_url: ${{ secrets.CHECKMARX_URL }}
+          checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
+          checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
+          checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
+          scanners: sast
+          params: --logging.level.com.checkmarx=DEBUG --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }}
