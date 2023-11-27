@@ -8,3 +8,5 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: james-bostock-cx/checkmarx-cxflow-js-github-action@v0.1.2
+        with:
+          java_path: "C:/Program Files/Eclipse Adoptium/jdk-17.0.7.7-hotspot/bin/java'
