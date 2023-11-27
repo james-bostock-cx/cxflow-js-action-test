@@ -7,4 +7,4 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: james-bostock-cx/checkmarx-cxflow-js-github-action@v0.1.1
+        uses: james-bostock-cx/checkmarx-cxflow-js-github-action@v0.1.2
