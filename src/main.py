@@ -1,3 +1,4 @@
+# A trivial Python program
 import os
 import sys
 
