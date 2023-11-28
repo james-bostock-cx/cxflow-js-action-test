@@ -19,4 +19,4 @@ jobs:
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
           checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
           scanners: sast
-          params: --logging.level.com.checkmarx=DEBUG --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }}
+          params: --logging.level.com.checkmarx=DEBUG --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.ref }} --cx-flow.zip-exclude=\.git/.*,\.github/.*
